@@ -10,23 +10,16 @@ To write a C Program to perform the basic left shift operation for 44 integer nu
 5.	Stop the program.
 
 ## PROGRAM:
-  #include <stdio.h>
-  int main() {
-  int a = 44, b = 3;
-  int result = a << b;
-  printf("The result of left shifting %d by %d positions is: %d\n", a, b, result)
-  return 0;
-  }
+    #include <stdio.h>
+    int main() {
+    int a = 44, b = 3;
+    int result = a << b;
+    printf("The result of left shifting %d by %d positions is: %d\n", a, b, result)
+    return 0;
+    }
 
 ## OUTPUT
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/6bcd6f6a-e81b-405c-a31b-a727e86bfcec)
 
 ## RESULT
 Thus the program to perform the basic left shift operation for 44 integer number with 3 shifts has been executed successfully.
@@ -54,12 +47,26 @@ Write a C Program to check whether the two numbers are equal or not using simple
 5.	Stop the program.
 
 ## PROGRAM
-
+    #include <stdio.h>
+    int main() {
+    int num1, num2;
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    if (num1 == num2) {
+    printf("The numbers are equal.\n");
+    }
+    if (num1 != num2) {
+    printf("The numbers are not equal.\n");
+    }
+    return 0;
+    }
 
 ## OUTPUT
-           
+![image](https://github.com/user-attachments/assets/ab79c180-5040-4d8d-8123-34019e5ec4c6)
+         
 ## RESULT
-
 Thus the program to check whether the two numbers are equal or not using simple if statement has been executed successfully
  
  
@@ -77,11 +84,23 @@ Write a C Program to convert the given string into lowercase.
 5.	Stop the program.
 
 ## PROGRAM
-
+    #include <stdio.h>
+    #include <ctype.h>
+    int main()
+    {
+    char str[100];
+    int i = 0;
+    fgets(str, sizeof(str), stdin);
+    while (str[i])
+    {
+    str[i] = tolower(str[i]);
+    i++;
+    }
+    printf("Lowercase string: %s", str);
+    return 0;
+    }
 ## OUTPUT
-
-
-
+![image](https://github.com/user-attachments/assets/73b9c9bc-52dc-4a75-bf3c-f5d533362412)
 
 ## RESULT
 Thus the program to convert the given string into lowercase has been executed successfully
@@ -102,12 +121,27 @@ Write a C Program to count the total number of words in a given string using do 
 6.	Stop the program.
 
 ## PROGRAM
-
+    #include <stdio.h>
+    int main() {
+    char str[1000];
+    int i = 0, wordCount = 0;
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    do {
+    if (str[i] == ' ' || str[i] == '\n' || str[i] == '\0') {
+     wordCount++;
+    }
+    i++;
+    } while (str[i] != '\0');
+    if (wordCount > 0) {
+    printf("Total number of words: %d\n", wordCount);
+    } else {
+    printf("Total number of words: 0\n");
+    }
+    return 0;
+    }
 ## OUTPUT
-
-
-
-
+![image](https://github.com/user-attachments/assets/73688e1a-7ca7-4b1e-b547-4d3281d5ce6c)
 
 ## RESULT
 Thus the program to count the total number of words in a given string using do While loop has been executed successfully
@@ -136,9 +170,31 @@ Step 7: After the loop, check the value of flag:
 Step 8: End the program.
 
 ## PROGRAM
-
+    #include <stdio.h>
+    int main() {
+    char str1[1000], str2[1000];
+    int i = 0, flag = 0;
+    printf("Enter first string: ");
+    fgets(str1, sizeof(str1), stdin);
+    printf("Enter second string: ");
+    fgets(str2, sizeof(str2), stdin);
+    while (str1[i] != '\0' && str2[i] != '\0') {
+    if (str1[i] != str2[i]) {
+    flag = 1;
+    break;
+    }
+    i++;
+    }
+    if (flag == 0 && str1[i] == str2[i]) {
+    printf("Strings are equal.\n");
+    } else {
+    printf("Strings are not equal.\n");
+    }
+    return 0;
+    }
 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/d15e2439-7a2a-47fb-b92a-a4dcc8009959)
  
 
 ## RESULT
